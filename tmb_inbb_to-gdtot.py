@@ -151,9 +151,9 @@ j=''
 for i in inbbot:
 	j+=f"{i}\n"
 
-g = github.Github("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")
-repo = g.get_repo("shinas101/miscellaneous")
-contents = repo.get_contents("direct-gdtot.txt")
+g = github.Github("YOUR_GITHUB_TKN")
+repo = g.get_repo("YOUR_REPO")
+contents = repo.get_contents("OUTPUT_FILENAME.txt")
 repo.update_file(contents.path, "rocketman", f"{j}", contents.sha, branch="main")
 
 
@@ -162,6 +162,6 @@ for i in tmb_redirect:
 	j+=f"{i}\n"
 
 g = github.Github("YOUR_GITHUB_TKN")
-repo = g.get_repo("shinas101/miscellaneous")
-contents = repo.get_contents("inbbot-link.txt")
+repo = g.get_repo("YOUR_REPO")
+contents = repo.get_contents("OUTPUT_FILENAME.txt")
 repo.update_file(contents.path, "hesoyam", f"{j}", contents.sha, branch="main")
